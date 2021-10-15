@@ -7,6 +7,8 @@
  *
  */
 
+#ifdef CTRLC
+
 #include "ctrlc.h"
 
 #if defined MATLAB
@@ -78,3 +80,5 @@ int osqp_is_interrupted(void) {
 }
 
 #endif /* END IF IS_MATLAB / WINDOWS */
+
+#endif // CTRLC

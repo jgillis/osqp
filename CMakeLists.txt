@@ -47,7 +47,7 @@ else()
 endif()
 
 # Is printing enabled?
-option (PRINTING "Enable solver printing" ON)
+option (PRINTING "Enable solver printing" OFF)
 if (DEFINED EMBEDDED)
     message(STATUS "Disabling printing for embedded")
     set(PRINTING OFF)
@@ -56,7 +56,7 @@ message(STATUS "Printing is ${PRINTING}")
 
 
 # Is profiling enabled?
-option (PROFILING "Enable solver profiling (timing)" ON)
+option (PROFILING "Enable solver profiling (timing)" OFF)
 if (DEFINED EMBEDDED)
     message(STATUS "Disabling profiling for embedded")
     set(PROFILING OFF)
@@ -64,7 +64,7 @@ endif()
 message(STATUS "Profiling is ${PROFILING}")
 
 # Is user interrupt enabled?
-option (CTRLC "Enable user interrupt (Ctrl-C)" ON)
+option (CTRLC "Enable user interrupt (Ctrl-C)" OFF)
 if (DEFINED EMBEDDED)
     message(STATUS "Disabling user interrupt for embedded")
     set(CTRLC OFF)
@@ -90,7 +90,7 @@ message(STATUS "Code coverage is ${COVERAGE}")
 
 # Linear solvers dependencies
 # ---------------------------------------------
-option (ENABLE_MKL_PARDISO "Enable MKL Pardiso solver" ON)
+option (ENABLE_MKL_PARDISO "Enable MKL Pardiso solver" OFF)
 if (DFLOAT)
 	message(STATUS "Disabling MKL Pardiso Solver with floats")
 	set(ENABLE_MKL_PARDISO OFF)
