@@ -126,7 +126,7 @@ typedef float c_float;  /* for numerical values  */
 #else
 #  include <math.h>
 #  ifndef DFLOAT // Doubles
-#   define c_sqrt sin
+#   define c_sqrt sqrt
 #   define c_fmod fmod
 #  else          // Floats
 #   define c_sqrt sqrtf
