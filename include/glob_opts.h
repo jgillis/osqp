@@ -119,14 +119,20 @@ typedef float c_float;  /* for numerical values  */
 
 # if EMBEDDED != 1
 
+#ifdef BECKHOFF
+#include <TcMath.h>
+#define c_sqrt sqrt_
+#define c_fmod fmod_
+#else
 #  include <math.h>
 #  ifndef DFLOAT // Doubles
-#   define c_sqrt sqrt
+#   define c_sqrt sin
 #   define c_fmod fmod
 #  else          // Floats
 #   define c_sqrt sqrtf
 #   define c_fmod fmodf
 #  endif /* ifndef DFLOAT */
+#endif
 
 # endif // end EMBEDDED
 

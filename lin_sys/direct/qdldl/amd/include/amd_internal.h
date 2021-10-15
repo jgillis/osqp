@@ -61,7 +61,12 @@
 #include <limits.h>
 
 /* from math.h: sqrt */
+#ifdef BECKHOFF
+#include <TcMath.h>
+#define sqrt sqrt_
+#else
 #include <math.h>
+#endif
 
 /* ------------------------------------------------------------------------- */
 /* MATLAB include files (only if being used in or via MATLAB) */

@@ -4,6 +4,11 @@ cmake_minimum_required (VERSION 3.2)
 # Project name
 project (osqp)
 
+## Flanders Make
+#add_definitions(-DBECKHOFF)
+#include_directories(folder containing TcMath.h)
+#link_libraries(lib file that implements TcMath)
+
 # Export compile commands
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
