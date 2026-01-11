@@ -202,6 +202,9 @@ struct OSQPWorkspace_ {
   /// Reciprocal of rho
   OSQPFloat rho_inv;
 
+  /// Initial rho value (before any adaptive updates)
+  OSQPFloat rho_initial;
+
 # ifdef OSQP_ENABLE_PROFILING
   OSQPTimer* timer;       ///< timer object
 
