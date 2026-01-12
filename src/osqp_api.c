@@ -1298,6 +1298,8 @@ void osqp_cold_start(OSQPSolver *solver) {
   OSQPVectorf_set_scalar(work->x, 0.);
   OSQPVectorf_set_scalar(work->z, 0.);
   OSQPVectorf_set_scalar(work->y, 0.);
+  OSQPVectorf_set_scalar(work->x_prev, 0.);
+  OSQPVectorf_set_scalar(work->z_prev, 0.);
 
   /* Cold start the linear system solver */
   work->linsys_solver->warm_start(work->linsys_solver, work->x);
